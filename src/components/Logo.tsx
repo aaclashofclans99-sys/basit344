@@ -25,13 +25,11 @@ export default function Logo({ className = "h-8" }: LogoProps) {
           {/* Central point */}
           <circle cx="20" cy="20" r="2" fill="url(#icon-gradient)" />
 
-          {/* 6 radial lines */}
+          {/* 4 radial lines */}
           <line x1="20" y1="20" x2="20" y2="5" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
           <line x1="20" y1="20" x2="33" y2="10" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
           <line x1="20" y1="20" x2="33" y2="30" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
           <line x1="20" y1="20" x2="20" y2="35" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="20" y1="20" x2="7" y2="30" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="20" y1="20" x2="7" y2="10" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </div>
 
