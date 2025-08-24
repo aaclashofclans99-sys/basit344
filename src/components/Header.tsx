@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
+import Logo from './Logo';
 
 interface HeaderProps {
   currentPage?: string;
@@ -46,10 +47,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
               className="flex items-center space-x-2 cursor-pointer"
               onClick={() => handleNavigation('home')}
             >
-              <img src="/public/Screenshot 2025-08-23 154231.png" alt="Inflow" className="h-8 w-auto" />
-              <span className="text-2xl font-bold text-gradient">
-                Inflow
-              </span>
+              <Logo className="h-8" textColor="#0A1A4F" iconColor="#0A1A4F" />
             </div>
 
             {/* Desktop Navigation */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 
 interface FooterProps {
   onNavigate?: (page: string) => void;
@@ -35,12 +36,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Email */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <img src="/public/Screenshot 2025-08-23 154231.png" alt="Inflow" className="h-8 w-auto" />
-              <span className="text-2xl font-bold text-gradient">
-                Inflow
-              </span>
-            </div>
+            <Logo className="h-8" textColor="#0A1A4F" iconColor="#0A1A4F" />
             <div className="space-y-2">
               <p className="text-gray-600 text-sm">Email:</p>
               <a 
