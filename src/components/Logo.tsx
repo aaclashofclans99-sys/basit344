@@ -4,42 +4,38 @@ interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ className = "h-8" }: LogoProps) {
+export default function Logo({ className = "" }: LogoProps) {
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
-      {/* Radial Icon with Gradient */}
-      <div className="relative w-10 h-10 flex items-center justify-center">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#6A11CB" />   {/* Purple */}
-              <stop offset="100%" stopColor="#2575FC" /> {/* Blue */}
-            </linearGradient>
-          </defs>
-
-          {/* Central point */}
-          <circle cx="20" cy="20" r="2" fill="url(#icon-gradient)" />
-
-          {/* 4 radial lines */}
-          <line x1="20" y1="20" x2="20" y2="5" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="20" y1="20" x2="33" y2="10" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="20" y1="20" x2="33" y2="30" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
-          <line x1="20" y1="20" x2="20" y2="35" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      </div>
-
-      {/* Text with Gradient */}
+    <div
+      className={`flex items-center justify-center ${className}`}
+      style={{ background: "transparent" }}
+    >
+      {/* Radial Icon */}
+      <svg
+        width={48}
+        height={48}
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ marginRight: 10, display: "block", minWidth: 48 }}
+      >
+        {/* 6 radial lines in dark blue */}
+        <line x1="24" y1="24" x2="24" y2="8" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="36" y2="14" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="40" y2="26" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="36" y2="37" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="24" y2="40" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="10" y2="36" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="8" y2="24" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="14" y2="11" stroke="#122057" strokeWidth="2.5" strokeLinecap="round" />
+      </svg>
+      {/* Logo Text */}
       <span
-        className="text-3xl font-extrabold tracking-tight"
         style={{
-          background: "linear-gradient(90deg, #6A11CB, #2575FC)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
+          color: "#122057",
+          fontSize: "2.5rem",
+          fontWeight: 800,
+          letterSpacing: "-0.01em",
           fontFamily: "Inter, system-ui, -apple-system, sans-serif"
         }}
       >
