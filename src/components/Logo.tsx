@@ -1,33 +1,49 @@
 import React from 'react';
 
-terface LogoProps {
+interface LogoProps {
   className?: string;
-  textColor?: string;
-  iconColor?: string;
 }
 
-export default function Logo({ className = "h-8", textColor = "#0A1A4F", iconColor = "#0A1A4F" }: LogoProps) {
+export default function Logo({ className = "h-8" }: LogoProps) {
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
-      {/* Radial Icon */}
-      <div className="relative w-8 h-8 flex items-center justify-center">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Radial Icon with Gradient */}
+      <div className="relative w-10 h-10 flex items-center justify-center">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#6A11CB" />   {/* Purple */}
+              <stop offset="100%" stopColor="#2575FC" /> {/* Blue */}
+            </linearGradient>
+          </defs>
+
           {/* Central point */}
-          <circle cx="16" cy="16" r="1.5" fill={iconColor} />
-          
-          {/* 5 rays pointing outward */}
-          <line x1="16" y1="16" x2="16" y2="6" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" />
-          <line x1="16" y1="16" x2="24.5" y2="10.5" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" />
-          <line x1="16" y1="16" x2="24.5" y2="21.5" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" />
-          <line x1="16" y1="16" x2="16" y2="26" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" />
-          <line x1="16" y1="16" x2="7.5" y2="21.5" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" />
+          <circle cx="20" cy="20" r="2" fill="url(#icon-gradient)" />
+
+          {/* 6 radial lines */}
+          <line x1="20" y1="20" x2="20" y2="5" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
+          <line x1="20" y1="20" x2="33" y2="10" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
+          <line x1="20" y1="20" x2="33" y2="30" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
+          <line x1="20" y1="20" x2="20" y2="35" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
+          <line x1="20" y1="20" x2="7" y2="30" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
+          <line x1="20" y1="20" x2="7" y2="10" stroke="url(#icon-gradient)" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </div>
-      
-      {/* Text */}
-      <span 
-        className="text-2xl font-bold tracking-tight"
-        style={{ color: textColor, fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}
+
+      {/* Text with Gradient */}
+      <span
+        className="text-3xl font-extrabold tracking-tight"
+        style={{
+          background: "linear-gradient(90deg, #6A11CB, #2575FC)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          fontFamily: "Inter, system-ui, -apple-system, sans-serif"
+        }}
       >
         Inflow
       </span>
